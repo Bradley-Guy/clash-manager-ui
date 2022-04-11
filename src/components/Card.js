@@ -12,7 +12,7 @@ class Card extends React.Component {
                 <img alt={""}/>
                 <p>{cardName}</p>
             </div>
-            )
+            );
         }
     }
 
