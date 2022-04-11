@@ -1,22 +1,21 @@
 import './App.css';
-import axios from 'axios';
 import React from 'react';
 import Table from './components/Table.js'
+import ClanTagInput from './components/ClanTagInput';
 
 function App() {
-  const url = "http://localhost:7071/api/ClanStats?clanTag=9YQQQ98";
   const [data, setData] = React.useState(null);
 
-  React.useEffect(() => {
-    axios.get(url).then((response) => {
-      setData(response.data);
-    });
-  }, []);
-
-  if (!data) return <Table/>;
+  if (!data) return (
+    <div className='App'>
+      <ClanTagInput setData={setData}/>
+      <Table/>
+    </div>
+    );
 
   return (
-    <div className="App">
+    <div className='App'>
+      <ClanTagInput setData={setData}/>
       <Table data={data}/>;
     </div>
   );
