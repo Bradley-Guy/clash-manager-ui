@@ -39,6 +39,10 @@
     padding-right: 0.4em;
 }
 
+.container input::placeholder {
+    color: #d0d0d0;
+}
+
 .container p {
     height: 100%;
 }

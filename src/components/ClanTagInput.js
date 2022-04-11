@@ -27,7 +27,11 @@ class ClanTagInput extends React.Component {
                     // value={this.state.input}
                     value={this.state.input}
                     onChange={e => this.setState({input: e.target.value.toUpperCase()})}
-                    // onSubmit={(e) => this.updateClan()}
+                    onKeyDown={(e) => {
+                        if(e && e.key == 'Enter') {
+                            this.updateClan();
+                        }
+                    }}
                 />
                 <button onClick={(e) => this.updateClan()}><span className='material-icons'>search</span></button>
                 </div>
