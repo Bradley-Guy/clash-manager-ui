@@ -18,7 +18,7 @@ class ClanTagInput extends React.Component {
         });
     }
     toggleDropdown() {
-        if(this.state.showTuning == classes.show) {
+        if(this.state.showTuning === classes.show) {
             this.setState({
                 input: this.state.input,
                 showTuning: classes.hide
@@ -43,7 +43,7 @@ class ClanTagInput extends React.Component {
                     value={this.state.input}
                     onChange={e => this.setState({input: e.target.value.toUpperCase()})}
                     onKeyDown={(e) => {
-                        if(e && e.key == 'Enter') {
+                        if(e && e.key === 'Enter') {
                             this.updateClan();
                         }
                     }}
