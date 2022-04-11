@@ -2,7 +2,10 @@
     margin-left: 2em;
     margin-top: 1em;
     float: left;
-    border-collapse: collapse;
+    border-spacing: 0px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .table th {
