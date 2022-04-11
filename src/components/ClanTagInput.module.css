@@ -47,4 +47,17 @@
     height: 100%;
 }
 
+div.hide {
+    display: none;
+}
 
+div.show {
+    background-color: #40c077;
+    display: block;
+    position: fixed;
+    font-size: 1.2em;
+    right: 0;
+    top: 2em;
+    width: 100%;
+    height: auto;
+}

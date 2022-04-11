@@ -6,7 +6,8 @@ class ClanTagInput extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            input: ''
+            input: '',
+            showTuning: classes.show
         }
     }
     updateClan() {
@@ -14,6 +15,19 @@ class ClanTagInput extends React.Component {
         axios.get(url).then((response) => {
             this.props.setData(response.data);
         });
+    }
+    toggleDropdown() {
+        if(this.state.showTuning == classes.show) {
+            this.setState({
+                input: this.state.input,
+                showTuning: classes.hide
+            });
+        } else {
+            this.setState({
+                input: this.state.input,
+                showTuning: classes.show
+            });
+        }
     }
     render() {
         return (
@@ -34,7 +48,9 @@ class ClanTagInput extends React.Component {
                     }}
                 />
                 <button onClick={(e) => this.updateClan()}><span className='material-icons'>search</span></button>
+                <button onClick={(e) => this.toggleDropdown()}><span className='material-icons'>tune</span></button>
                 </div>
+                <div className={this.state.showTuning}>Filters Will Go Here</div>
             </div>
          );
     }
