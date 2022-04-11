@@ -2,11 +2,18 @@
     margin-left: 2em;
     margin-top: 1em;
     float: left;
-    border: 2px solid black;
     border-collapse: collapse;
 }
 
-.table td, .table th {
+.table th {
+    background-color: #994be2;
+    color: white;
+    padding: 0.3em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.table td {
     height: 100%;
-    border: 1px solid black;
+    border-bottom: 1px solid lightgrey;
 }
