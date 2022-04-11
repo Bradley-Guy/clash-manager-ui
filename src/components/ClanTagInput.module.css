@@ -1,6 +1,3 @@
-.materialIcons {
-    display: block !important;
-}
 .container * {
     all: unset;
     font-size: 1.2em;
@@ -27,19 +24,23 @@
     cursor: pointer;
 }
 
+.container span {
+    display: inherit !important;
+    position: relative !important;
+    top: 0.2em !important;
+}
+
 .container button:hover {
     background-color: #994be2;
 }
 
 .container input {
-    width: 6em;
+    width: 6.2em;
     padding-right: 0.4em;
 }
 
 .container p {
-    /* padding-left: 1em; */
     height: 100%;
-    width: 2em;
 }
 
 

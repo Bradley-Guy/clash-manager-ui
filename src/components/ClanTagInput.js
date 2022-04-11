@@ -23,7 +23,7 @@ class ClanTagInput extends React.Component {
                 <p>#</p>
                 <input
                     type="text"
-                    placeholder='Enter clan tag'
+                    placeholder='Enter Clan Tag'
                     // value={this.state.input}
                     value={this.state.input}
                     onChange={e => this.setState({input: e.target.value.toUpperCase()})}
