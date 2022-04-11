@@ -3,7 +3,24 @@ import React from 'react';
 
 class Table extends React.Component {
     render() {
-        if(this.props.data) {
+        if(this.props.data && this.props.data == "loading") {
+            return (
+                <table className={classes.table}>
+                    <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Username</th>
+                        <th>Score</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            Loading...
+                        </tr>
+                    </tbody>
+                </table>
+            );
+        }else if(this.props.data) {
             return (
             <table className={classes.table}>
                 <thead>
@@ -28,18 +45,7 @@ class Table extends React.Component {
             </table>
             );
         } else {
-            return (
-                <table className={classes.table}>
-                    <thead>
-                    <tr>
-                        <th>Rank</th>
-                        <th>Username</th>
-                        <th>Score</th>
-                    </tr>
-                    </thead>
-                </table>
-            );
-            
+            return null;
         }
     }
 }

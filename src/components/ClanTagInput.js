@@ -7,11 +7,12 @@ class ClanTagInput extends React.Component {
         super(props);
         this.state = {
             input: '',
-            showTuning: classes.show
+            showTuning: classes.hide
         }
     }
     updateClan() {
         let url = 'http://localhost:7071/api/ClanStats?clanTag=' + this.state.input;
+        this.props.setData("loading");
         axios.get(url).then((response) => {
             this.props.setData(response.data);
         });
