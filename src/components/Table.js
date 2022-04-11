@@ -1,10 +1,11 @@
+import classes from './Table.module.css'
 import React from 'react';
 
 class Table extends React.Component {
     render() {
         if(this.props.data) {
             return (
-            <table>
+            <table className={classes.table}>
                 <thead>
                 <tr>
                     <th>Rank</th>
@@ -28,7 +29,7 @@ class Table extends React.Component {
             );
         } else {
             return (
-                <table>
+                <table className={classes.table}>
                     <thead>
                     <tr>
                         <th>Rank</th>

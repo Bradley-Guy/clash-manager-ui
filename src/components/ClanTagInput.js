@@ -18,15 +18,19 @@ class ClanTagInput extends React.Component {
     render() {
         return (
             <div className={classes.container}>
-                <p>#<input
+                <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
+                <div>
+                <p>#</p>
+                <input
                     type="text"
                     placeholder='Enter clan tag'
                     // value={this.state.input}
                     value={this.state.input}
                     onChange={e => this.setState({input: e.target.value.toUpperCase()})}
-                /></p>
-                
-                <button onClick={(e) => this.updateClan()}>Update</button>
+                    // onSubmit={(e) => this.updateClan()}
+                />
+                <button onClick={(e) => this.updateClan()}><span className='material-icons'>search</span></button>
+                </div>
             </div>
          );
     }

@@ -1,3 +1,45 @@
-.container * {
-    display: inline-block;
+.materialIcons {
+    display: block !important;
 }
+.container * {
+    all: unset;
+    font-size: 1.2em;
+    text-align: left;
+    height: 100%;
+    color: white;
+}
+
+.container {
+    text-align: left;
+    height: 2.5em;
+    display: flex;
+    background-color: #8a2be2;
+    width: 100%;
+}
+
+.container div {
+    /* background-color: white; */
+    width: auto;
+    margin-left: 1em;
+}
+
+.container button {
+    cursor: pointer;
+}
+
+.container button:hover {
+    background-color: #994be2;
+}
+
+.container input {
+    width: 6em;
+    padding-right: 0.4em;
+}
+
+.container p {
+    /* padding-left: 1em; */
+    height: 100%;
+    width: 2em;
+}
+
+
