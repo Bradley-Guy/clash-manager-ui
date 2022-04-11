@@ -1,4 +1,5 @@
 import classes from './ClanTagInput.module.css'
+import Slider from './Slider.js'
 import React from 'react';
 import axios from 'axios';
 
@@ -38,6 +39,7 @@ class ClanTagInput extends React.Component {
                 <p>#</p>
                 <input
                     type="text"
+                    className={classes.textInput}
                     placeholder='Enter Clan Tag'
                     // value={this.state.input}
                     value={this.state.input}
@@ -51,7 +53,9 @@ class ClanTagInput extends React.Component {
                 <button onClick={(e) => this.updateClan()}><span className='material-icons'>search</span></button>
                 <button onClick={(e) => this.toggleDropdown()}><span className='material-icons'>tune</span></button>
                 </div>
-                <div className={this.state.showTuning}>Filters Will Go Here</div>
+                <div className={this.state.showTuning}>
+                    <Slider name="test"/>
+                </div>
             </div>
          );
     }

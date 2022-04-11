@@ -1,0 +1,13 @@
+
+div.slider {
+    height: 100%;
+    display: flex;
+    width: 8em;
+}
+
+div.slider input {
+    background-color: lightblue;
+    border-radius: 4px;
+    height: 0.2em;
+    margin-top: 0.7em;
+}
