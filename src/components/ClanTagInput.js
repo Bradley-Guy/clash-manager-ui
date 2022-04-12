@@ -8,7 +8,7 @@ class ClanTagInput extends React.Component {
         super(props);
         this.state = {
             input: '',
-            showTuning: classes.hide
+            showTuning: classes.noShow
         }
     }
     updateClan() {
@@ -35,7 +35,7 @@ class ClanTagInput extends React.Component {
         return (
             <div className={classes.container}>
                 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
-                <div>
+                <div className={classes.inner}>
                 <p>#</p>
                 <input
                     type="text"

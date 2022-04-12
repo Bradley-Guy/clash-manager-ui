@@ -4,20 +4,24 @@
     height: 100%;
 }
 
+.container.preload * {
+    animation-duration: 0s !important;
+}
+
 .container {
     position: sticky;
     top: 0;
     text-align: left;
-    height: 2.5em;
-    display: block;
     color: white;
-    background-color: #8a2be2;
-    width: 100%;
+    
 }
 
-.container div {
-    width: auto;
-    margin-left: 1em;
+.container .inner {
+    height: 2.5em;
+    display: block;
+    background-color: #8a2be2;
+    width: 100%;
+    z-index: 1;
 }
 
 .container button {
@@ -44,11 +48,36 @@
 }
 
 .container p {
+    margin-left: 1em;
     height: 100%;
 }
 
+@keyframes slideUp {
+    from {display: block;top: 2.5em;}
+    to {display: block;top: -10em;}
+}
+
+@keyframes slideDown {
+    from {display: block;top: -10em;}
+    to {display: block;top: 2.5em;}
+}
+
+div.noShow {
+    position: fixed;
+    z-index: -1;
+    background-color: #40c077;
+    height: auto;
+    border-radius: 0 0 8px 8px;
+}
+
 div.hide {
-    display: none;
+    animation: slideUp 0.3s;
+    position: fixed;
+    z-index: -1;
+    background-color: #40c077;
+    height: auto;
+    border-radius: 0 0 8px 8px;
+    top: -10em;
 }
 
 div.show {
@@ -59,4 +88,7 @@ div.show {
     right: 0;
     width: 100%;
     height: auto;
+    z-index: -1;
+    border-radius: 0 0 8px 8px;
+    animation: slideDown 0.3s ease-out;
 }
