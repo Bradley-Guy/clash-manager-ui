@@ -1,15 +1,14 @@
-.card{
+.card {
     margin-left: 4em;
     margin-top: 1em;
-    float: left;
-    border-spacing: 0px;
     border: 2px solid grey;
     background-color: lightgrey;
     border-radius: 15px;
     overflow: hidden;
+    float: left;
 }
 
-.card p{
+.card p {
     font-weight: 750;
     font-size: 1.75em;
 }

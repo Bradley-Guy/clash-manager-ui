@@ -9,11 +9,11 @@
 }
 
 .container {
-    position: sticky;
+    width: 100%;
     top: 0;
     text-align: left;
     color: white;
-    
+    position: fixed;
 }
 
 .container .inner {
@@ -54,11 +54,11 @@
 
 @keyframes slideUp {
     from {display: block;top: 2.5em;}
-    to {display: block;top: -13em;}
+    to {display: block;top: -16em;}
 }
 
 @keyframes slideDown {
-    from {display: block;top: -13em;}
+    from {display: block;top: -16em;}
     to {display: block;top: 2.5em;}
 }
 
@@ -74,12 +74,13 @@ div.hide {
     background-color: #994be2;
     height: auto;
     border-radius: 0 0 8px 8px;
-    top: -13em;
+    top: -16em;
     border: 2px solid lightblue;
     border-top: none;
 }
 
 div.show {
+    top: 2.5em;
     box-sizing: border-box;
     background-color: #994be2;
     display: block;
