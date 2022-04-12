@@ -67,21 +67,24 @@ div.noShow {
 }
 
 div.hide {
+    box-sizing: border-box;
     animation: slideUp 0.2s;
     position: fixed;
     z-index: -1;
-    background-color: #40c077;
+    background-color: #994be2;
     height: auto;
     border-radius: 0 0 8px 8px;
     top: -13em;
+    border: 2px solid lightblue;
+    border-top: none;
 }
 
 div.show {
-    background-color: #40c077;
+    box-sizing: border-box;
+    background-color: #994be2;
     display: block;
     position: fixed;
     font-size: 1.2em;
-    right: 0;
     width: 100%;
     height: auto;
     min-height: 1em;
@@ -89,4 +92,6 @@ div.show {
     z-index: -1;
     border-radius: 0 0 8px 8px;
     animation: slideDown 0.2s;
+    border: 2px solid lightblue;
+    border-top: none;
 }
