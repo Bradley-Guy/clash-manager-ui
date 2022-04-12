@@ -1,4 +1,5 @@
 import React from 'react';
+import classes from './Card.module.css';
 
 class Card extends React.Component {
     render() {
@@ -6,10 +7,10 @@ class Card extends React.Component {
             let url = this.props.data.favouriteCard.imageUri;
             let cardName = this.props.data.favouriteCard.name;
             return (
-            <div>
-                <p>Favourite Card:</p>
+            <div className={classes.card}>
+                <p className={classes.top}>Favourite Card:</p>
                 <img src={url} alt="The clan's favourite card."/>
-                <p>{cardName}</p>
+                <p className={classes.bottom}>{cardName}</p>
             </div>
             );
         }
