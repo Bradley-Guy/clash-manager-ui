@@ -54,7 +54,11 @@ class ClanTagInput extends React.Component {
                 <button onClick={(e) => this.toggleDropdown()}><span className='material-icons'>tune</span></button>
                 </div>
                 <div className={this.state.showTuning}>
-                    <Slider name="test"/>
+                    <Slider name="Trophies"/>
+                    <Slider name="Last Online"/>
+                    <Slider name="Cards Donated"/>
+                    <Slider name="Cards Received"/>
+                    <Slider name="War Score"/>
                 </div>
             </div>
          );

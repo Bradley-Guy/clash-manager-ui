@@ -1,13 +1,23 @@
 
 div.slider {
-    height: 100%;
-    display: flex;
-    width: 8em;
+    display: block;
+    height: 1.5em;
+    float: left
 }
 
 div.slider input {
+    display: block;
     background-color: lightblue;
     border-radius: 4px;
     height: 0.2em;
-    margin-top: 0.7em;
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
+    float: left;
+}
+
+.slider p {
+    width: 10em;
+    font-size: 1em;
+    padding-right: 0.3em;
+    float: left;
 }
