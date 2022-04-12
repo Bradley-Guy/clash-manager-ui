@@ -54,11 +54,11 @@
 
 @keyframes slideUp {
     from {display: block;top: 2.5em;}
-    to {display: block;top: -10em;}
+    to {display: block;top: -13em;}
 }
 
 @keyframes slideDown {
-    from {display: block;top: -10em;}
+    from {display: block;top: -13em;}
     to {display: block;top: 2.5em;}
 }
 
@@ -73,7 +73,7 @@ div.hide {
     background-color: #40c077;
     height: auto;
     border-radius: 0 0 8px 8px;
-    top: -10em;
+    top: -13em;
 }
 
 div.show {
@@ -84,6 +84,8 @@ div.show {
     right: 0;
     width: 100%;
     height: auto;
+    min-height: 1em;
+    overflow: hidden;
     z-index: -1;
     border-radius: 0 0 8px 8px;
     animation: slideDown 0.2s;

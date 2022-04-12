@@ -1,7 +1,6 @@
 
 div.slider {
     display: block;
-    height: 1.5em;
     float: left;
 }
 
@@ -11,13 +10,13 @@ div.slider input {
     border-radius: 4px;
     height: 0.2em;
     margin-top: 0.6em;
-    margin-bottom: 0.2em;
+    margin-bottom: 0.5em;
+    margin-left: 0.5em;
     float: left;
 }
 
 .slider p {
-    width: 10em;
+    width: 9em;
     font-size: 1em;
-    padding-right: 0.3em;
     float: left;
 }
