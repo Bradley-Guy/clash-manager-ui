@@ -21,7 +21,21 @@ class Table extends React.Component {
                     </tbody>
                 </table>
             );
-        }else if(this.props.data) {
+        } else if(this.props.data) {
+            let players = Object.entries(this.props.data.players).map(player => {
+                let data = player[1];
+                data.score = 0;
+                for(let scoreType in data.scores) {
+                    data.score += this.props.multipliers[scoreType] * data.scores[scoreType];
+                }
+                data.score = data.score.toFixed(0);
+                data.tag = player[0];
+                return data
+            });
+
+            players = players.sort((a, b) => {
+                return a.score - b.score;
+            });
             return (
             <table className={classes.table}>
                 <thead>
@@ -33,12 +47,12 @@ class Table extends React.Component {
                 </thead>
                 <tbody>
                 {
-                this.props.data.ranks.map((item, index) => {
+                players.map((player, index) => {
                     return(
-                    <tr key={item[1].name}>
+                    <tr key={player.name}>
                         <td>{index + 1}</td>
-                        <td>{item[1].name}</td>
-                        <td> { item[1].score}</td>
+                        <td>{player.name}</td>
+                        <td> {player.score}</td>
                     </tr>
                     );
                 })}
