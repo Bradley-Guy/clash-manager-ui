@@ -1,4 +1,5 @@
 .table {
+    display: block;
     border-spacing: 0px;
     border: 1px solid lightgrey;
     border-radius: 10px;

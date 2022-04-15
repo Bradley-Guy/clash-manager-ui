@@ -52,6 +52,12 @@
     height: 100%;
 }
 
+@media (max-width: 60em) {
+    .container p {
+        margin-left: 0.3em;
+    }
+}
+
 @keyframes slideUp {
     from {display: block;top: 2.5em;}
     to {display: block;top: -16em;}

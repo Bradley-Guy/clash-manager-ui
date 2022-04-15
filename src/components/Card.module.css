@@ -6,6 +6,7 @@
     border-radius: 15px;
     overflow: hidden;
     height: 100%;
+    float: left;
 }
 
 .card p {
