@@ -1,7 +1,7 @@
 .table {
     margin-left: 2em;
     margin-top: 1em;
-    float: left;
+    display: block;
     border-spacing: 0px;
     border: 1px solid lightgrey;
     border-radius: 10px;
