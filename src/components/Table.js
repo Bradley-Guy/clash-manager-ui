@@ -3,7 +3,7 @@ import React from 'react';
 
 class Table extends React.Component {
     render() {
-        if(this.props.data && this.props.data === "loading") {
+        if(this.props.data && typeof this.props.data == 'string') {
             return (
                 <table className={classes.table}>
                     <thead>
@@ -15,7 +15,7 @@ class Table extends React.Component {
                     </thead>
                     <tbody>
                         <tr>
-                            <td colSpan="3">Loading...</td>
+                            <td colSpan="3">{this.props.data}</td>
                             
                         </tr>
                     </tbody>

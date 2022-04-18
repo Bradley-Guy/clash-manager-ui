@@ -3,7 +3,7 @@ import classes from './Card.module.css';
 
 class Card extends React.Component {
     render() {
-        if(this.props.data !== "loading") {
+        if(typeof this.props.data != 'string') {
             let url = this.props.data.favouriteCard.imageUri;
             let cardName = this.props.data.favouriteCard.name;
             return (
