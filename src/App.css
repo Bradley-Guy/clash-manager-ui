@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin-top: 1em;
 }
 
 .App-logo {
@@ -30,7 +31,7 @@
 
 .tables {
   margin-left: 2em;
-  margin-top: 1em;
+  /* margin-top: 1em; */
   float: left;
   display: inline-grid;
   grid-auto-columns: 1fr;
@@ -40,6 +41,11 @@
   .tables {
     margin-left: 0;
   }
+}
+
+div.chart {
+  display: inline-block;
+  width: 40em;
 }
 
 @keyframes App-logo-spin {

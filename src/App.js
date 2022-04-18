@@ -39,10 +39,9 @@ function App() {
       </div>
     );
   } else {
-    // let chartData = [
-    //   ["Time", "Score"],
-    //   data.clanHistory.map(e => e.score)
-    // ];
+    let chartData = data.history.map((e, index) => [index * 15, e.score]);
+    chartData.unshift(["Time", "Score"]);
+    console.log(JSON.stringify(chartData));
     return (
       <div className='App'>
         <ClanTagInput setData={setData} multipliers={scoreMultipliers} setMultipliers={setScoreMultipliers}/>
@@ -51,13 +50,14 @@ function App() {
         <Table data={data} multipliers={scoreMultipliers}/>
         </div>
         {/* <Card data={data}/> */}
-        {/* <Chart
-          chartType="ScatterChart"
+        <div className='chart'>
+        <Chart
+          className='chart'
+          chartType="LineChart"
           data={chartData}
-          width="30em"
-          // height="400px"
           legendToggle
-        /> */}
+        />
+        </div>
       </div>
     );
   }
