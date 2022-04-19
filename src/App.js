@@ -39,9 +39,10 @@ function App() {
       </div>
     );
   } else {
-    let chartData = data.history.map((e, index) => [index * 15, e.score]);
+    let chartData = [];
+    if(data.history)
+      chartData = data.history.map((e, index) => [index * 15, e.score]);
     chartData.unshift(["Time", "Score"]);
-    console.log(JSON.stringify(chartData));
     return (
       <div className='App'>
         <ClanTagInput setData={setData} multipliers={scoreMultipliers} setMultipliers={setScoreMultipliers}/>
@@ -55,7 +56,7 @@ function App() {
           className='chart'
           chartType="LineChart"
           data={chartData}
-          legendToggle
+          legend="bottom"
         />
         </div>
       </div>
