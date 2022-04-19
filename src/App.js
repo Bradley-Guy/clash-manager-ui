@@ -38,7 +38,11 @@ function App() {
       </div>
     );
   } else {
-    let chartData = data.history.map((e, index) => [index * 15, e.score]);
+    let chartData = [[0, 0]];
+    if(data.history) {
+      chartData = data.history.map((e, index) => [index * 15, e.score])
+    }
+    
     let options = {
       title: "Clan Trophies Over Time",
       legend: {position: "bottom"},
@@ -47,7 +51,10 @@ function App() {
     };
     chartData.unshift(["Time", "Score"]);
 
-    let chartDataWar = data.history.map((e, index) => [index * 15, e.trophies]);
+    let chartDataWar = [[0, 0]];
+    if(data.history) {
+      chartDataWar = data.history.map((e, index) => [index * 15, e.trophies]);
+    }
     let optionsWar = {
       title: "Clan War Trophies Over Time",
       legend: {position: "bottom"},
@@ -56,7 +63,10 @@ function App() {
     };
     chartDataWar.unshift(["Time", "War Trophies"]);
 
-    let chartDataMembers = data.history.map((e, index) => [index * 15, e.members]);
+    let chartDataMembers = [[0, 0]];
+    if(data.history) {
+      chartDataMembers = data.history.map((e, index) => [index * 15, e.members]);
+    }
     let optionsMembers = {
       title: "Clan Members Over Time",
       legend: {position: "bottom"},
@@ -64,7 +74,6 @@ function App() {
       vAxis: {title: "Number of Members"}
     };
     chartDataMembers.unshift(["Time", "Member Count"]);
-    console.log(JSON.stringify(chartData));
     return (
       <div className='App'>
         <ClanTagInput setData={setData} multipliers={scoreMultipliers} setMultipliers={setScoreMultipliers}/>
