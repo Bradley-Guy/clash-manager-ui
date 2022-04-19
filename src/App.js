@@ -35,12 +35,35 @@ function App() {
         <ClanDetails data={data}/>
         <Table data={data} multipliers={scoreMultipliers}/>
         </div>
-        {/* <Card data={data}/> */}
       </div>
     );
   } else {
     let chartData = data.history.map((e, index) => [index * 15, e.score]);
+    let options = {
+      title: "Clan Trophies Over Time",
+      legend: {position: "bottom"},
+      hAxis: {title: "Time"},
+      vAxis: {title: "Clan Trophies"}
+    };
     chartData.unshift(["Time", "Score"]);
+
+    let chartDataWar = data.history.map((e, index) => [index * 15, e.trophies]);
+    let optionsWar = {
+      title: "Clan War Trophies Over Time",
+      legend: {position: "bottom"},
+      hAxis: {title: "Time"},
+      vAxis: {title: "War Trophies"}
+    };
+    chartDataWar.unshift(["Time", "War Trophies"]);
+
+    let chartDataMembers = data.history.map((e, index) => [index * 15, e.members]);
+    let optionsMembers = {
+      title: "Clan Members Over Time",
+      legend: {position: "bottom"},
+      hAxis: {title: "Time"},
+      vAxis: {title: "Number of Members"}
+    };
+    chartDataMembers.unshift(["Time", "Member Count"]);
     console.log(JSON.stringify(chartData));
     return (
       <div className='App'>
@@ -49,13 +72,32 @@ function App() {
         <ClanDetails data={data}/>
         <Table data={data} multipliers={scoreMultipliers}/>
         </div>
-        {/* <Card data={data}/> */}
+        <Card data={data}/>
         <div className='chart'>
         <Chart
           className='chart'
           chartType="LineChart"
           data={chartData}
           legendToggle
+          options={options}
+        />
+        </div>
+        <div className='chart'>
+        <Chart
+          className='chart'
+          chartType="LineChart"
+          data={chartDataWar}
+          legendToggle
+          options={optionsWar}
+        />
+        </div>
+        <div className='chart'>
+        <Chart
+          className='chart'
+          chartType="LineChart"
+          data={chartDataMembers}
+          legendToggle
+          options={optionsMembers}
         />
         </div>
       </div>
